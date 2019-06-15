@@ -20,9 +20,9 @@
 </head>
 <body>
 <div class="container">
-<div id="content">
-<p>
-<script> document.write(new Date().toLocaleDateString()); </script><br>
+<div id="content"><p>
+<span id="datetime"></span>
+<br>
 Receipt no. 045826
 <br>
 
@@ -63,5 +63,10 @@ $('#cmd').click(function () {
     });
     doc.save('sample-file.pdf');
 });
+
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleString();
+
 </script>
 </html>
+
